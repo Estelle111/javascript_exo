@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_4</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form name="details">
+            <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+            <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+            <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+            <button name="valider" id="valider" onclick="display()">Valider</button>
+        </form>
+        <script>
+            function display() {
+                var x = document.querySelector("#nom").value;
+                var y = document.querySelector("#prenom").value;
+                var z = document.querySelector("#ville").value;
+                alert("Nom : " + x + "\n" + "Prénom : " + y + "\n" + "Ville : " + z);
+            }
+        </script>
+    </body>
+</html>
