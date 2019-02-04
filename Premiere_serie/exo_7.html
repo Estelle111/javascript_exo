@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_7</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+            <button id="valider" name="valider" onclick="display()">Valider</button>
+        </form>
+        <script>
+            function display() {
+                chauss = document.querySelector("#pointure").value;
+                naiss = document.querySelector("#annee").value;
+                resultat = ((((chauss * 2) + 5) * 50) - naiss) + 1766;
+                alert(resultat);
+            }
+        </script>
+    </body>
+</html>
+
+<!-- Créer une fonction qui fait les calculs suivants :
+1) Multiplier la pointure par 2
+2) Ajouter 5 au résultat
+3) Multiplier le tout par 50
+4) Soustraire l’année de naissance
+5) Ajouter au tout 1766
+La fonction doit retourner le résultat. 
+Tester avec votre date de naissance et votre pointure. 
+Attention : n'utiliser une seule variable « resultat ». -->

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_8</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="age">Votre âge : </label><input type="text" id="age" name="age"/><br/>
+            <button id="valider" name="valider" onclick="display()">Valider</button>
+        </form>
+        <script>
+            function display() {
+                data = document.querySelector("#age").value;
+                if (data < 18) {
+                    alert("Vous êtes mineur.e");
+                }else if (data >= 18) {
+                    alert("Vous êtes majeur.e");
+                }
+            }
+        </script>
+    </body>
+</html>
