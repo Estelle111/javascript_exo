@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_1bis</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label>Largeur du rectangle : </label><input type="text" id="largeurS" /><br/>
+            <label>Longueur du rectangle : </label><input type="text" id="longueurS" /><br/><br/>
+            <button id="calculSurface">Calculer la surface du rectangle</button>
+            <button id="calculPeri">Calculer le périmètre du rectangle</button>
+        </form>
+        <script>          
+            function surfaceRectangle(e) {
+                e.preventDefault();
+                larg = parseInt(document.querySelector("#largeurS").value);
+                long = parseInt(document.querySelector("#longueurS").value);
+                alert(larg * long);
+            }
+            document.querySelector("#calculSurface").addEventListener("click", surfaceRectangle);
+
+            function periRectangle(e) {
+                e.preventDefault();
+                larg = parseInt(document.querySelector("#largeurS").value);
+                long = parseInt(document.querySelector("#longueurS").value);
+                alert(2 * (larg + long));
+            }
+            document.querySelector("#calculPeri").addEventListener("click", periRectangle);
+        </script>
+    </body>
+</html>
