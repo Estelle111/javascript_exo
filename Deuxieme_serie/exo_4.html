@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_3</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button>button</button>
+        <script>          
+            tab = [-2, 1, 4];
+            function additionne(x) {
+                return x + 2;
+            }
+            function affiche(e) {
+                e.preventDefault();
+                for (i = 0; i < tab.length; i++) {
+                    alert(additionne(tab[i]));
+                }               
+            }
+            document.querySelector("button").addEventListener("click", affiche);
+        </script>
+    </body>
+</html>

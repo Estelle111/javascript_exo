@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_3</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button id="calcul">button</button>
+        <script>          
+            var a = 3,
+            b = 2;
+
+            function triple(x) {
+                return (x * 3);
+            }
+            function affiche(e) {
+                alert(triple(a));
+                alert(triple(b));
+            }
+            document.querySelector("button").addEventListener("click", affiche);
+            
+        </script>
+    </body>
+</html>

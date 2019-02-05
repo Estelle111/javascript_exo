@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_2</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label>Rayon du cercle : </label><input type="text" id="rayon" /><br/><br/>
+            <button id="calculRayon">Calculer la surface du cercle</button>
+        </form>
+        <script>          
+            function display(e) {
+                e.preventDefault();
+                data = parseInt(document.querySelector("#rayon").value);
+                alert(Math.round(Math.PI * (data * data)));
+            }
+            document.querySelector("button").addEventListener("click", display);
+        </script>
+    </body>
+</html>
