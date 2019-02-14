@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_7</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button>button</button>
+        <script>  
+            function faireChoix() {
+                result = prompt("Veuillez entrer un nombre entre 1, 2 ou 3");
+                switch(result) {
+                    case "1":
+                        alert("1. Merci")
+                        break;
+                    case "2":
+                        alert("2. Bonjour")
+                        break;
+                    case "3": 
+                        alert("3. Au revoir")
+                        break;
+                    default: 
+                        alert("Pardon, que voulez-vous ?");
+                }
+            }
+            document.querySelector("button").addEventListener("click", faireChoix);
+        </script>
+    </body>
+</html>

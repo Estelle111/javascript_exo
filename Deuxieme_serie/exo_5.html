@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_5</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button id="b1">b=2 </br> a=b++</button>
+        <button id="b2">b=2 </br> a=++b</button>
+        <button id="b3">b=2 </br> a=b--</button>
+        <button id="b4">b=2 </br> a=--b</button>
+        <button id="b5">b=2 </br> a+=b++</button>
+        <button id="b6">a=1; b=2 </br> a+=++b</button>
+        <button id="b7">a=1; b=2 </br> a-=b++</button>
+        <button id="b8">a=1; b=2 </br> a-=++b</button>
+        <button id="b9">a=1; b=2 </br> a+=b--</button>
+        <button id="b10">a=1; b=2 </br> a+=--b</button>
+        <script>
+            function calcul1(e) {
+                b=2;
+                a=b++;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul2(e) {
+                b=2;
+                a=++b;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul3(e) {
+                b=2;
+                a=b--;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul4(e) {
+                b=2;
+                a=--b;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul5(e) {
+                b=2;
+                a+=b++;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul6(e) {
+                a=1;
+                b=2;
+                a+=++b;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul7(e) {
+                a=1;
+                b=2;
+                a-=b++;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul8(e) {
+                a=1;
+                b=2;
+                a-=++b;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul9(e) {
+                a=1;
+                b=2;
+                a+=b--;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            function calcul10(e) {
+                a=1;
+                b=2;
+                a+=--b;
+                let result = [a, b];
+                return alert("a = "+result[0]+"\n"+"b = "+result[1]);
+            }
+            
+            // function affiche(e) {
+            //     e.preventDefault();
+            //     let cal = calcul();
+            //     // console.log(cal);
+            //     alert("a = "+cal[0]+"\n"+"b = "+cal[1]);
+            // }
+                     
+            document.querySelector("#b1").addEventListener("click", calcul1);
+            document.querySelector("#b2").addEventListener("click", calcul2);
+            document.querySelector("#b3").addEventListener("click", calcul3);
+            document.querySelector("#b4").addEventListener("click", calcul4);
+            document.querySelector("#b5").addEventListener("click", calcul5);
+            document.querySelector("#b6").addEventListener("click", calcul6);
+            document.querySelector("#b7").addEventListener("click", calcul7);
+            document.querySelector("#b8").addEventListener("click", calcul8);
+            document.querySelector("#b9").addEventListener("click", calcul9);
+            document.querySelector("#b10").addEventListener("click", calcul10);
+        </script>
+    </body>
+</html>
+
+<!-- 
+b est toujours initialisée à 2.
+Quel est le résultat des opérations suivantes ?
+Pour chacune des opérations, afficher l'opération effectuée, 
+la valeur de a après l'opération et la valeur de b après l'opération. -->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exo_8</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button>button</button>
+        <script>  
+        function jourDeLaSemaine() {
+            var day;
+            switch(new Date().getDay()) {
+                case 1:
+                    day = "Lundi"
+                    break;
+                case 2:
+                    day = "Mardi"
+                    break;
+                case 3:
+                    day = "Mercredi"
+                    break;
+                case 4:
+                    day = "Jeudi"
+                    break;
+                case 5:
+                    day = "Vendredi"
+                    break;
+                case 6:
+                    day = "Samedi"
+                    break;
+                case 7:
+                    day = "Dimanche"
+                    break;
+            }
+            return alert(day);
+        }
+        document.querySelector("button").addEventListener("click", jourDeLaSemaine);
+        </script>
+    </body>
+</html>
