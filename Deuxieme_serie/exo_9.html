@@ -8,8 +8,14 @@
         <button>button</button>
         <script>  
         function testWhile() {
-
-        }
+            var letter = "p";
+            var userInput;
+            do {
+                userInput = prompt("Please enter a word with p");
+            } while (letter.indexOf(userInput) ===-1);
+            
+        }        
+        document.querySelector("button").addEventListener("click", testWhile);
         </script>
     </body>
 </html>
