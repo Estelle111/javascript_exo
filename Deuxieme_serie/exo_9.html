@@ -6,15 +6,24 @@
     </head>
     <body>
         <button>button</button>
-        <script>  
+        <script> 
         function testWhile() {
-            var letter = "p";
-            var userInput;
-            do {
-                userInput = prompt("Please enter a word with p");
-            } while (letter.indexOf(userInput) ===-1);
-            
-        }        
+            letter = "p";
+            data = prompt("Please enter a word with p");
+            while (data.toLowerCase().indexOf(letter)==-1) {
+                data = prompt("Please enter a word with p");
+            }
+            alert(data);
+        } 
+        
+        // function testWhile() {
+        //     var letter = "p";
+        //     var userInput;
+        //     do {
+        //         userInput = prompt("Please enter a word with p");
+        //     } while (letter.indexOf(userInput) ===-1);
+        //     console.log(userInput);
+        // }        
         document.querySelector("button").addEventListener("click", testWhile);
         </script>
     </body>
