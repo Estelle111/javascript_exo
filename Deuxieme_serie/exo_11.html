@@ -7,26 +7,29 @@
     <body>
         <button>button</button>
         <script>          
+            
             function calculMoyenne() {
+                var memoire = [];
                 newNumber = 0;
                 userNumber = prompt("Veuillez entrer un nombre entier");
                 while (userNumber != parseInt(userNumber)) {
-                    alert("Erreur");
                     userNumber = prompt("Veuillez entrer un nombre entier");
-                    if (parseFloat(userNumber)>=0) {
-                    newNumber = parseFloat(newNumber) + parseFloat(userNumber);
-                    console.log(parseFloat(newNumber));
+                    if (parseInt(userNumber)>=0) {
+                        memoire.push(userNumber);
+                        //newNumber = parseFloat(newNumber) + parseFloat(userNumber);
+                        console.log(memoire);
                     }   
                 }
                 console.log(userNumber);
-                
+            }   
+            document.querySelector("button").addEventListener("click", calculMoyenne);
                 
                 /*if (userNumber>=0) {
                         console.log(parseFloat(userNumber)+parseFloat(userNumber));
                     }else if (userNumber<0) {
 
                     }*/
-            }
+            
 
             // function positif() {
             //     if (calculMoyenne()>=0) {
@@ -42,8 +45,6 @@
             //         console.log(str);
             //     }
             // }
-
-            document.querySelector("button").addEventListener("click", calculMoyenne);
 
         </script>
     </body>
