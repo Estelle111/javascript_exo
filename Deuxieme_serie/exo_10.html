@@ -7,11 +7,13 @@
     <body>
         <button>button</button>
         <script>          
-            function somme() {
-                x = prompt("Veuillez entrer un nombre");
-                y = prompt("Veuillez entrer un nombre");
-                z = prompt("Veuillez entrer un nombre");
-                alert(parseInt(x)+parseInt(y)+parseInt(z));
+            function somme() { 
+                let nb = 0
+                for (i=0; i<3; i++) {
+                    userNb = prompt("Veuillez entrer un nombre"); 
+                    nb = parseInt(nb) + parseInt(userNb); 
+                }
+                alert(nb);
             }
             document.querySelector("button").addEventListener("click", somme);
         </script>
