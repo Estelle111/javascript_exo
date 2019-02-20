@@ -9,29 +9,35 @@
         <script>          
             
             function calculMoyenne() {
-                var memoire = [];
-                newNumber = 0;
-                userNumber = prompt("Veuillez entrer un nombre. Tant qu'il est positif, entrez un nouveau nombre. S'il est négatif, le programme s'arrête");
-                while (Number(userNumber) >= 0) {
-                    userNumber = prompt("Entrez un nouveau nombre");
-                    memoire.push(userNumber);
-                    if (Number(userNumber)<0) {
-                        console.log(memoire);
-                    }   
-                }
+                let myArray = [];
+                let sum = 0;
+                userNumber = prompt("Veuillez entrer un nombre. Tant qu'il est positif, entrez un nouveau nombre. S'il est négatif, le programme s'arrête.");
+                myArray.push(userNumber);
+                while (userNumber = Number(userNumber)) {
+                    if (Number(userNumber) >= 0) {
+                        userNumber = prompt("Entrez un nouveau nombre");
+                        myArray.push(userNumber); 
+                        for (i=0; i<myArray.length; i++) {
+                            sum += Number(myArray[i]);
+                        }
+                        console.log(sum); 
+                    }else if (Number(userNumber)<0) {
+                        console.log(myArray);
+                    }                    
+                }    
             }   
             document.querySelector("button").addEventListener("click", calculMoyenne);
             
             /*function calculMoyenne() {
-                var memoire = [];
+                var myArray = [];
                 newNumber = 0;
                 userNumber = prompt("Veuillez entrer un nombre entier");
                 while (userNumber != parseInt(userNumber)) {
                     userNumber = prompt("Veuillez entrer un nombre entier");
                     if (parseInt(userNumber)>=0) {
-                        memoire.push(userNumber);
+                        myArray.push(userNumber);
                         //newNumber = parseFloat(newNumber) + parseFloat(userNumber);
-                        console.log(memoire);
+                        console.log(myArray);
                     }   
                 }
                 console.log(userNumber);
