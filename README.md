@@ -1,5 +1,5 @@
 # javascript_exo
-After 1 month and 14 days of training
+**After 1 month and 14 days of training**
 
 ## Description
 Practicing javascript and algorithms
